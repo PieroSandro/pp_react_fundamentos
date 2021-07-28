@@ -1,8 +1,12 @@
+import React from 'react';
+import Counter from './componentes/Counter';
 
-function App() {
+//function App() {
+  const App =()=>{
   return (
     <div>
-      Hola React
+      <h1>Hola React</h1>
+      <Counter/>
     </div>
   );
 }
