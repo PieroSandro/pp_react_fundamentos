@@ -12,10 +12,13 @@ const Counter = () => {
     }
 
     return ( 
-        <Fragment>
-        <h3>Componente para contador: {contador}</h3>
-        <button onClick={aumentar}>Aumentar</button>
-        </Fragment>
+        <div class="card m-4 p-3">
+            <h2>Componente #1</h2>
+        <h4>Componente para contador: {contador}</h4>
+        <div class="d-grid gap-2 col-3 mx-auto">
+        <button type="button" class="btn btn-primary" onClick={aumentar}>Aumentar</button>
+        </div>
+        </div>
      );
 }
  
