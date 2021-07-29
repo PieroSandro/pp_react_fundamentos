@@ -2,6 +2,7 @@ import React from 'react';
 import Counter from './componentes/Counter';
 import Jsx from './componentes/Jsx';
 import Lista from './componentes/Lista';
+import Formulario from './componentes/Formulario';
 
 //function App() {
   const App =()=>{
@@ -11,6 +12,7 @@ import Lista from './componentes/Lista';
       <Counter/>
       <Jsx/>
       <Lista/>
+      <Formulario/>
     </div>
   );
 }
