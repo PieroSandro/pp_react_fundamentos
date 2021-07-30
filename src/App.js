@@ -3,6 +3,7 @@ import Counter from './componentes/Counter';
 import Jsx from './componentes/Jsx';
 import Lista from './componentes/Lista';
 import Formulario from './componentes/Formulario';
+import FormHook from './componentes/FormHook';
 
 //function App() {
   const App =()=>{
@@ -13,6 +14,7 @@ import Formulario from './componentes/Formulario';
       <Jsx/>
       <Lista/>
       <Formulario/>
+      <FormHook/>
     </div>
   );
 }
