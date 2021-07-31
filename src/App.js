@@ -7,6 +7,7 @@ import FormHook from './componentes/FormHook';
 import ComponenteEjemplo from './componentes/ComponenteEjemplo';
 import Hola from './componentes/Hola';
 import Comentario from './componentes/Comentario';
+import Crud from './componentes/Crud';
 
 //function App() {
   const App =()=>{
@@ -29,6 +30,7 @@ import Comentario from './componentes/Comentario';
       <Hola numero="7" usuario="Piero" edad={32}/>
       <Hola numero="8" usuario="Renzo" edad={34}/>
       <Comentario persona={persona}/>
+      <Crud/>
     </div>
   );
 }
