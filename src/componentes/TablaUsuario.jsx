@@ -20,7 +20,8 @@ const TablaUsuario = (props) => {
         <td>{usuario.nombre}</td>
         <td>{usuario.nombreUsuario}</td>
         <td>
-          <button className="button muted-button">Edit</button>
+          <button className="button muted-button"
+          onClick={()=>{props.editarRegistro(usuario)}}>Edit</button>
           <button className="button muted-button"
           onClick={()=>{props.eliminarUsuario(usuario.id)}}>Delete</button>
         </td>

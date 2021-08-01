@@ -30,6 +30,23 @@ const Crud = () => {
     }
 
     //editar
+    const [edit, setEdit]=useState(false)
+    const [currentUser,setCurrentUser]=useState({
+        id:null,nombre:'',nombreUsuario:''
+    })
+    const editarRegistro=(usuario)=>{
+        setEdit(true)
+        setCurrentUser({
+            id:usuario.id,
+            nombre:usuario.nombre,
+            nombreUsuario:usuario.nombreUsuario
+        })
+    }
+
+    const actualizarUsuario=(id,usuarioActualizado)=>{
+        setEdit(false)
+        setUsuarios(usuarios.map(usuario=>(usuario.id===id?usuarioActualizado:usuario)))
+    }
 
 
     return ( 
@@ -38,14 +55,30 @@ const Crud = () => {
         <h4>CRUD</h4>
             <div className="flex-row">
                 <div class="flex-large">
-                    <EditarUsuarioForm/>
-                    <h2>Agregar Usuario</h2>
-                    <AgregarUsuarioForm agregarUsuario={agregarUsuario}/>
+
+                    {
+                        edit?(
+                            <div>
+                                 <h2>Editar Usuario</h2>
+                                <EditarUsuarioForm
+                                    currentUser={currentUser}
+                                    actualizarUsuario={actualizarUsuario}
+                                />
+                            </div>
+                        ) : (
+                            <div>
+                            <h2>Agregar Usuario</h2>
+                            <AgregarUsuarioForm agregarUsuario={agregarUsuario}/>
+                            </div>
+                        )
+                    }
+                   
                 </div>
                 <div class="flex-large">
                     <h2>Lista usuarios</h2>
                     <TablaUsuario usuarios={usuarios}
-                    eliminarUsuario={eliminarUsuario}/>
+                    eliminarUsuario={eliminarUsuario} 
+                    editarRegistro={editarRegistro}/>
                 </div>
             </div>
         </div>

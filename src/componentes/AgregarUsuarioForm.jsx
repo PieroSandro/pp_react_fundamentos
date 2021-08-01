@@ -29,8 +29,7 @@ const AgregarUsuarioForm = (props) => {
        {...register("nombreUsuario", {
         required: {value:true,message:'Campo nombre de usuario obligatorio'},
         minLength: {value:2,message:'Debe ingresar mínimo 2 caracteres'},
-        maxLength: {value:15,message:'Debe ingresar máximo 5 caracteres'},
-        pattern: {value:/^[A-Za-z]+$/i,message:'Debe ingresar sólo letras'}
+        maxLength: {value:15,message:'Debe ingresar máximo 5 caracteres'}
     })}
       />
        <span class="text-danger text-small d-block mb-2">
