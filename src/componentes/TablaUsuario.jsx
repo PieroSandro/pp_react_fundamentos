@@ -1,6 +1,8 @@
 import React from 'react'
 
-const TablaUsuario = () => {
+const TablaUsuario = (props) => {
+
+    console.log(props.usuarios)
     return ( 
         <table>
     <thead>
@@ -11,14 +13,25 @@ const TablaUsuario = () => {
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Name data</td>
-        <td>Username data</td>
+      {
+        props.usuarios.length>0?
+        props.usuarios.map(usuario=>(
+          <tr key={usuario.id}>
+        <td>{usuario.nombre}</td>
+        <td>{usuario.nombreUsuario}</td>
         <td>
           <button className="button muted-button">Edit</button>
-          <button className="button muted-button">Delete</button>
+          <button className="button muted-button"
+          onClick={()=>{props.eliminarUsuario(usuario.id)}}>Delete</button>
         </td>
       </tr>
+        )) : (
+          <tr>
+            <td colSpan={3}>No hay usuarios</td>
+          </tr>
+        )
+      }
+      
     </tbody>
   </table>
      );
