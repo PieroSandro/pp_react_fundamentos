@@ -8,6 +8,9 @@ import ComponenteEjemplo from './componentes/ComponenteEjemplo';
 import Hola from './componentes/Hola';
 import Comentario from './componentes/Comentario';
 import Crud from './componentes/Crud';
+import { BrowserRouter as Router,Switch,Route,Link,NavLink } from 'react-router-dom';
+import Inicio from './componentes/Inicio';
+import Detalles from './componentes/Detalles';
 
 //function App() {
   const App =()=>{
@@ -19,8 +22,29 @@ import Crud from './componentes/Crud';
   }
 
   return (
+    <Router>
     <div class="m-4">
-      <h1 class="text-center">Hola React</h1>
+      <h1 class="text-center">Aplicación React</h1>
+      <div className="btn-group">
+        <Link to="/" 
+        className="btn btn-dark">
+          Inicio
+        </Link>
+        <Link to="/react-ejemplos"
+        className="btn btn-dark">
+          Ejemplos React
+        </Link>
+        <NavLink to="/detalles" 
+        className="btn btn-dark"
+        activeClassName="active">
+          Detalles
+        </NavLink>
+      </div>
+      <Switch>
+      <Route path="/" exact>
+      <Inicio/>
+      </Route>
+      <Route path="/react-ejemplos">
       <Counter/>
       <Jsx/>
       <Lista/>
@@ -31,7 +55,14 @@ import Crud from './componentes/Crud';
       <Hola numero="8" usuario="Renzo" edad={34}/>
       <Comentario persona={persona}/>
       <Crud/>
+      </Route>
+      <Route path="/detalles">
+      <Detalles/>
+      </Route>
+      </Switch>
+     
     </div>
+    </Router>
   );
 }
 
