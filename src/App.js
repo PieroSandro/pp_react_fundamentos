@@ -11,6 +11,7 @@ import Crud from './componentes/Crud';
 import { BrowserRouter as Router,Switch,Route,Link,NavLink } from 'react-router-dom';
 import Inicio from './componentes/Inicio';
 import Detalles from './componentes/Detalles';
+import ConsumiendoApi from './componentes/ConsumiendoApi';
 
 //function App() {
   const App =()=>{
@@ -39,6 +40,11 @@ import Detalles from './componentes/Detalles';
         activeClassName="active">
           Detalles
         </NavLink>
+        <NavLink to="/consumiendo-api" 
+        className="btn btn-dark"
+        activeClassName="active">
+          Consumiendo API
+        </NavLink>
       </div>
       <Switch>
       <Route path="/" exact>
@@ -58,6 +64,9 @@ import Detalles from './componentes/Detalles';
       </Route>
       <Route path="/detalles">
       <Detalles/>
+      </Route>
+      <Route path="/consumiendo-api">
+      <ConsumiendoApi/>
       </Route>
       </Switch>
      
