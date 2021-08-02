@@ -12,6 +12,8 @@ import { BrowserRouter as Router,Switch,Route,Link,NavLink } from 'react-router-
 import Inicio from './componentes/Inicio';
 import Detalles from './componentes/Detalles';
 import ConsumiendoApi from './componentes/ConsumiendoApi';
+import ConsumiendoApiDos from './componentes/ConsumiendoApiDos';
+import ApiDosDetalle from './componentes/ApiDosDetalle';
 
 //function App() {
   const App =()=>{
@@ -45,10 +47,18 @@ import ConsumiendoApi from './componentes/ConsumiendoApi';
         activeClassName="active">
           Consumiendo API
         </NavLink>
+        <NavLink to="/consumiendo-api-parte-dos" 
+        className="btn btn-dark"
+        activeClassName="active">
+          Consumiendo API Parte 2
+        </NavLink>
       </div>
       <Switch>
       <Route path="/" exact>
       <Inicio/>
+      </Route>
+      <Route path="/consumiendo-api-parte-dos/:id">
+    <ApiDosDetalle/>
       </Route>
       <Route path="/react-ejemplos">
       <Counter/>
@@ -67,6 +77,9 @@ import ConsumiendoApi from './componentes/ConsumiendoApi';
       </Route>
       <Route path="/consumiendo-api">
       <ConsumiendoApi/>
+      </Route>
+      <Route path="/consumiendo-api-parte-dos">
+      <ConsumiendoApiDos/>
       </Route>
       </Switch>
      
