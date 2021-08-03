@@ -1,3 +1,15 @@
+REACT 17, TEMAS DESARROLLADOS:
+
+1- Componentes (maquetaciòn y funcionalidad)
+2- Renderizado de elementos, y renderizado usando condicional
+3- Estados
+4- Eventos
+5- Formulario
+6- Props (comunicaciòn entre componentes como componente padre y componente hijo)
+7- Hooks (useState, useEffect, useReducer)
+8- Redux (con ducks)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
