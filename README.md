@@ -1,3 +1,5 @@
+################################################################################
+
 REACT 17, TEMAS DESARROLLADOS:
 
 1- Componentes (maquetaciòn y funcionalidad)
@@ -7,8 +9,12 @@ REACT 17, TEMAS DESARROLLADOS:
 5- Formulario
 6- Props (comunicaciòn entre componentes como componente padre y componente hijo)
 7- Hooks (useState, useEffect, useReducer)
-8- Redux (con ducks)
+8- Redux (con ducks, aplicacion con API)
+9- Router
 
+NOTA: Iniciar proyecto con npm start para ver componentes
+
+################################################################################
 
 # Getting Started with Create React App
 
