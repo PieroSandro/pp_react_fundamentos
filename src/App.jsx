@@ -14,6 +14,9 @@ import Detalles from './componentes/Detalles';
 import ConsumiendoApi from './componentes/ConsumiendoApi';
 import ConsumiendoApiDos from './componentes/ConsumiendoApiDos';
 import ApiDosDetalle from './componentes/ApiDosDetalle';
+import Pks from './componentes/Pks';
+import { Provider } from 'react-redux';//permite trabajar con store.js y pkDucks.js
+import generateStore from './redux/store';
 
 //function App() {
   const App =()=>{
@@ -23,6 +26,8 @@ import ApiDosDetalle from './componentes/ApiDosDetalle';
     urlImg:'https://via.placeholder.com/64',
     texto:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
   }
+
+  const store=generateStore()
 
   return (
     <Router>
@@ -52,6 +57,11 @@ import ApiDosDetalle from './componentes/ApiDosDetalle';
         activeClassName="active">
           Consumiendo API Parte 2
         </NavLink>
+        <NavLink to="/redux" 
+        className="btn btn-dark"
+        activeClassName="active">
+          Redux
+        </NavLink>
       </div>
       <Switch>
       <Route path="/" exact>
@@ -80,6 +90,11 @@ import ApiDosDetalle from './componentes/ApiDosDetalle';
       </Route>
       <Route path="/consumiendo-api-parte-dos">
       <ConsumiendoApiDos/>
+      </Route>
+      <Route path="/redux">
+      <Provider store={store}>
+      <Pks/>
+      </Provider>
       </Route>
       </Switch>
      
