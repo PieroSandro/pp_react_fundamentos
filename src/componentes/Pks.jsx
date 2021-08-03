@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useDispatch, useSelector } from 'react-redux' //usedispatch para consumir la accion, useselector para leer las constantes de los ducks
-import { obtenerPksAccion } from '../redux/pkDucks'
+import { obtenerPksAccion,nextPokeAccion } from '../redux/pkDucks'
 
 const Pks = () => {
     const dispatch=useDispatch()//llama a la accion que se encuentra en pkDucks.js
@@ -13,6 +13,7 @@ const Pks = () => {
             <h2 class="text-center">Uso de redux con Pokemones</h2>
             
             <button onClick={()=>dispatch(obtenerPksAccion())}>Obtener Pokemones</button>
+            <button onClick={()=>dispatch(nextPokeAccion(20))}>Siguiente</button>
          
                  {
                      pokes.map(item=>(
