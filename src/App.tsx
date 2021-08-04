@@ -17,9 +17,10 @@ import ApiDosDetalle from './componentes/ApiDosDetalle';
 import Pks from './componentes/Pks';
 import { Provider } from 'react-redux';//permite trabajar con store.js y pkDucks.js
 import generateStore from './redux/store';
+import FormTypescript from './componentes/FormTypescript';
 
-//function App() {
-  const App =()=>{
+//function App():JSX.Element {
+  const App =():JSX.Element=>{
 
   const persona={
     nombre:'Nelson',
@@ -31,8 +32,8 @@ import generateStore from './redux/store';
 
   return (
     <Router>
-    <div class="m-4">
-      <h1 class="text-center">Aplicación React</h1>
+    <div className="m-4">
+      <h1 className="text-center">Aplicación React</h1>
       <div className="btn-group">
         <Link to="/" 
         className="btn btn-dark">
@@ -61,6 +62,11 @@ import generateStore from './redux/store';
         className="btn btn-dark"
         activeClassName="active">
           Redux
+        </NavLink>
+        <NavLink to="/formulario-typescript" 
+        className="btn btn-dark"
+        activeClassName="active">
+          Formulario con typescript
         </NavLink>
       </div>
       <Switch>
@@ -95,6 +101,9 @@ import generateStore from './redux/store';
       <Provider store={store}>
       <Pks/>
       </Provider>
+      </Route>
+      <Route path="/formulario-typescript">
+      <FormTypescript/>
       </Route>
       </Switch>
      
